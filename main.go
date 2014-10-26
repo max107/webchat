@@ -26,7 +26,7 @@ func main() {
 
 	http.HandleFunc("/", wsHandler)
 	srv := &http.Server{
-		Addr:           ":8080",
+		Addr:           "127.0.0.1:8082",
 		Handler:        Log(http.DefaultServeMux),
 		ReadTimeout:    1000 * time.Second,
 		WriteTimeout:   1000 * time.Second,
